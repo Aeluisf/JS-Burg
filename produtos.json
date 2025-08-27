@@ -1,0 +1,133 @@
+[
+  {
+    "id": 1, "category": "Lanches", "name": "Misto",
+    "description": "Pão, Queijo, Presunto.", "price": 7.00,
+    "img": "img/Misto.jpeg"
+  },
+  {
+    "id": 2, "category": "Lanches", "name": "Misto com Ovo",
+    "description": "Pão, Queijo, Presunto, e Ovo.", "price": 8.00,
+    "img": "img/Mistocomovo.jpeg"
+  },
+  {
+    "id": 3, "category": "Lanches", "name": "Burguer de Salada",
+    "description": "Pão, Carne, Queijo, Presunto, Salada.", "price": 11.00,
+    "img": "img/Burguer de Salada.jpeg"
+  },
+  {
+    "id": 4, "category": "Lanches", "name": "Virgínia",
+    "description": "Pão, Carne, Salsicha, Ovo, Presunto, Queijo, Batata Palha, Salada.", "price": 14.00,
+    "img": "img/Virgínia.jpeg"
+  },
+  {
+    "id": 5, "category": "Lanches", "name": "X Calabresa",
+    "description": "Pão, Carne, Queijo, Ovo, Calabresa, Salada.", "price": 15.00,
+    "img": "img/X Calabresa.jpeg"
+  },
+  {
+    "id": 6, "category": "Lanches", "name": "Cheddar Bacon",
+    "description": "Pão, Carne, Presunto, Cheddar, Ovo, Calabresa.", "price": 17.00,
+    "img": "img/Cheddar Bacon.jpeg"
+  },
+  {
+    "id": 7, "category": "Lanches", "name": "Mega Sistema",
+    "description": "Pão, 2 Carnes, 2 Ovos, Presunto, 1 Ovo, Calabresa, Bacon, Salada.", "price": 24.00,
+    "img": "img/Mega Sistema.jpeg"
+  },
+  {
+    "id": 8, "category": "Lanches", "name": "Gordão",
+    "description": "Pão, 2 Carnes, 2 Ovos, 2 Bananas, 2 Presuntos, Calabresa, Bacon, Milho, Batata Palha, Salada.", "price": 26.00,
+    "img": "img/Gordão.jpeg"
+  },
+  {
+    "id": 9, "category": "Artesanais", "name": "Duplo Artesanal",
+    "description": "Pão, 2 Carnes, 2 Queijos, 2 Presuntos, 2 Ovos.", "price": 29.00,
+    "img": "img/Duplo Artesanal.jpeg"
+  },
+  {
+    "id": 10, "category": "Artesanais", "name": "JS Cheese",
+    "description": "Pão, Carne, Queijo, Cream Cheese, Ovo, Bacon, Salada.", "price": 18.00,
+    "img": "img/JS Cheese.jpeg"
+  },
+  {
+    "id": 11, "category": "Artesanais", "name": "JS Barbecue",
+    "description": "Pão, Carne, Queijo, Presunto, Barbecue, Ovo, Bacon, Salada.", "price": 20.00,
+    "img": "img/JS Barbecue.jpeg"
+  },
+  {
+    "id": 12, "category": "Artesanais", "name": "JS Cheddar",
+    "description": "Pão, Carne, Queijo, Presunto, Cheddar, Ovo, Bacon, Salada.", "price": 22.00,
+    "img": "img/JS Cheddar.jpeg"
+  },
+  {
+    "id": 13, "category": "Artesanais", "name": "Franburguer Simples",
+    "description": "Pão, Frango, Queijo, Presunto, Ovo, Salada.", "price": 16.00,
+    "img": "img/Franburguer Simples.jpeg"
+  },
+  {
+    "id": 14, "category": "Artesanais", "name": "Franburguer",
+    "description": "Pão, Frango, Queijo, Ovo, Batata Palha, Presunto, Salada.", "price": 18.00,
+    "img": "img/Franburguer.jpeg"
+  },
+  {
+    "id": 15, "category": "Acompanhamentos", "name": "Batata Frita Porção",
+    "description": "Uma porção generosa de batatas fritas crocantes.", "price": 15.00,
+    "img": "img/Batata.jpeg"
+  },
+  {
+    "id": 16, "category": "Sobremesas", "name": "Churros Tradicional", "price": 7.00,
+    "img": "img/Churros Tradicional.jpeg",
+    "options": {
+      "title": "Escolha o sabor:",
+      "flavors": ["Doce de Leite", "Nutella", "Creme Ninho"]
+    }
+  },
+  {
+    "id": 17, "category": "Sobremesas", "name": "Churros Gourmet", "price": 9.00,
+    "img": "img/Churros Gourmet.jpeg",
+    "options": {
+      "title": "Escolha o sabor:",
+      "flavors": ["Doce de Leite", "Nutella", "Creme Ninho"]
+    }
+  },
+  {
+    "id": 18, "category": "Bebidas", "name": "Sucos", "price": 7.00,
+    "img": "img/sucos.jpeg",
+    "options": {
+      "title": "Escolha o sabor:",
+      "flavors": ["Cajú", "Cupuaçu", "Goiaba", "Creme"]
+    }
+  },
+  {
+    "id": 19, "category": "Bebidas", "name": "Refrigerante 2L", "price": 10.00,
+    "img": "img/Refrigerante 2L.jpeg",
+    "options": {
+        "title": "Escolha o sabor:",
+        "flavors": ["Coca-Cola", "Guaraná"]
+    }
+  },
+  {
+    "id": 20, "category": "Bebidas", "name": "Refrigerante 1L", "price": 8.00,
+    "img": "img/Refrigerante 1L.jpeg",
+    "options": {
+        "title": "Escolha o sabor:",
+        "flavors": ["Coca-Cola", "Guaraná"]
+    }
+  },
+  {
+    "id": 21, "category": "Bebidas", "name": "Coca-Cola Retornável 1L", "price": 7.00,
+    "img": "img/Refri retornavel.jpeg",
+    "options": {
+        "title": "Escolha o sabor:",
+        "flavors": ["Coca-Cola", "Guaraná"]
+    }
+  },
+  {
+    "id": 22, "category": "Bebidas", "name": "Refrigerante Lata", "price": 6.00,
+    "img": "img/Refrigerante Lata.jpeg",
+    "options": {
+        "title": "Escolha o sabor:",
+        "flavors": ["Coca-Cola", "Guaraná"]
+    }
+  }
+]

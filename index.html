@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Burguer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">JS Burguer</h1>
+            <div class="header-actions">
+                <input type="text" id="searchInput" placeholder="Buscar no cardápio...">
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="category-filters" class="category-filters">
+            </div>
+
+        <div id="products-grid" class="products-grid">
+            </div>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Meu Carrinho</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-summary">
+                <p class="total-price">Total: R$ 0,00</p>
+                <button id="checkout-btn" class="btn-primary">Continuar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="address-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Endereço e Pagamento</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="address-form">
+                <input type="text" id="address-input" placeholder="Seu endereço completo" required>
+                <input type="text" id="address-ref" placeholder="Ponto de referência (opcional)">
+                <p>Forma de Pagamento:</p>
+                <div class="payment-options">
+                    <label><input type="radio" name="payment" value="Pix" checked> Pix</label>
+                    <label><input type="radio" name="payment" value="Cartão"> Cartão</label>
+                    <label><input type="radio" name="payment" value="Dinheiro"> Dinheiro</label>
+                </div>
+                <textarea id="observations" placeholder="Observações do pedido..."></textarea>
+                <button id="send-order-btn" class="btn-primary">Enviar Pedido via WhatsApp</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
