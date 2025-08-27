@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let allProducts = [];
     let cart = [];
-    const storePhoneNumber = '5500000000000'; // Coloque seu número com código do país aqui
+    // NÚMERO ATUALIZADO AQUI
+    const storePhoneNumber = '5598991875270'; 
 
     async function loadProducts() {
         try {
@@ -33,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         productsGrid.innerHTML = '';
         products.forEach(product => {
             let optionsHtml = '';
-            // Define um preço padrão ou "A partir de" para produtos com opções
             let priceHtml = `<span class="price">R$ ${product.price ? product.price.toFixed(2) : 'A partir de'}</span>`;
 
             if (product.options) {
@@ -73,11 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ).join('');
     }
 
-    // --- LÓGICA DO CARRINHO (CORRIGIDA E MELHORADA) ---
-
     function addToCart(productId, selectedOptionName = null) {
         const product = allProducts.find(p => p.id === productId);
-        // Garante que o ID do item no carrinho seja sempre uma string única
         const cartItemId = selectedOptionName ? `${productId}-${selectedOptionName.replace(/\s+/g, '-')}` : productId.toString();
         
         const existingItem = cart.find(item => item.cartItemId === cartItemId);
@@ -91,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 price: product.price,
                 img: product.img,
                 quantity: 1,
-                cartItemId: cartItemId // ID único para o item no carrinho
+                cartItemId: cartItemId
             };
             cart.push(newItem);
         }
@@ -103,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cartItem) {
             cartItem.quantity += change;
             if (cartItem.quantity <= 0) {
-                // Se a quantidade for zero ou menos, remove o item
                 removeFromCart(cartItemId);
             } else {
                 updateCart();
@@ -147,9 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
         checkoutBtn.disabled = cart.length === 0;
     }
     
-    // --- EVENT LISTENERS (OUVINTES DE AÇÕES) ---
-
-    // Listener para adicionar ao carrinho
     productsGrid.addEventListener('click', (e) => {
         if (e.target.classList.contains('add-to-cart-btn')) {
             const card = e.target.closest('.product-card');
@@ -162,29 +155,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Listener para os botões DENTRO do carrinho (CORRIGIDO)
     cartItemsContainer.addEventListener('click', (e) => {
         const target = e.target;
         const cartItemEl = target.closest('.cart-item');
-        if (!cartItemEl) return; // Sai se o clique não foi em um item do carrinho
+        if (!cartItemEl) return;
 
         const cartItemId = cartItemEl.dataset.id;
 
-        // Verifica se o clique foi no botão de aumentar
         if (target.closest('.increase-qty')) {
             changeQuantity(cartItemId, 1);
         }
-        // Verifica se o clique foi no botão de diminuir
         if (target.closest('.decrease-qty')) {
             changeQuantity(cartItemId, -1);
         }
-        // Verifica se o clique foi no botão de remover
         if (target.closest('.remove-item-btn')) {
             removeFromCart(cartItemId);
         }
     });
-
-    // --- DEMAIS FUNÇÕES E LISTENERS (SEM ALTERAÇÕES CRÍTICAS) ---
 
     function sendOrderToWhatsApp() {
         const address = document.getElementById('address-input').value;
@@ -209,6 +196,5 @@ document.addEventListener('DOMContentLoaded', () => {
     checkoutBtn.addEventListener('click', () => { cartModal.style.display = 'none'; addressModal.style.display = 'flex'; });
     sendOrderBtn.addEventListener('click', sendOrderToWhatsApp);
     
-    // Inicialização
     loadProducts();
 });
